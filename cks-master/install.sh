@@ -28,10 +28,17 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 export KUBECONFIG=/etc/kubernetes/admin.conf
 
 # kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
-echo "install flannel..."
+#echo "install flannel..."
 # install flannel : https://gist.github.com/rkaramandi/44c7cea91501e735ea99e356e9ae7883
 # https://medium.com/platformer-blog/kubernetes-multi-node-cluster-with-multipass-on-ubuntu-18-04-desktop-f80b92b1c6a7
 #sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 sudo kubectl apply -f https://github.com/coreos/flannel/raw/master/Documentation/kube-flannel.yml
+#echo "install calico..."
+#https://docs.tigera.io/calico/latest/getting-started/kubernetes/self-managed-onprem/onpremises#install-calico
+#kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.27.0/manifests/tigera-operator.yaml
+#curl https://raw.githubusercontent.com/projectcalico/calico/v3.27.0/manifests/custom-resources.yaml -O
+#kubectl create -f custom-resources.yaml
+#echo "Verify Calico installation in your cluster..."
+#sudo watch kubectl get pods -n calico-system
 
 
