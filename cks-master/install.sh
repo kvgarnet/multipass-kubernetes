@@ -31,6 +31,7 @@ export KUBECONFIG=/etc/kubernetes/admin.conf
 echo "install flannel..."
 # install flannel : https://gist.github.com/rkaramandi/44c7cea91501e735ea99e356e9ae7883
 # https://medium.com/platformer-blog/kubernetes-multi-node-cluster-with-multipass-on-ubuntu-18-04-desktop-f80b92b1c6a7
-sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+#sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+sudo kubectl apply -f https://github.com/coreos/flannel/raw/master/Documentation/kube-flannel.yml
 
 
