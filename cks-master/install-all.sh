@@ -1,3 +1,3 @@
 ./containerd.sh
-./docker.sh
+#./docker.sh
 ./install.sh
