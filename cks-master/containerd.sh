@@ -18,7 +18,8 @@ sudo sysctl --system
 
 
 # (Install containerd)
-sudo apt-get update && sudo apt-get install -y containerd
+#sudo apt-get update && sudo apt-get install -y containerd
+sudo apt-get install -y containerd.io
 # Configure containerd
 sudo mkdir -p /etc/containerd
 sudo containerd config default | sudo tee /etc/containerd/config.toml

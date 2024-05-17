@@ -1,7 +1,3 @@
-
-~
-~
-"containerd.sh" 27L, 698C                                                                  27,0-1        All
 cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
 overlay
 br_netfilter
